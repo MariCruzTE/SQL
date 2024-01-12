@@ -20,14 +20,8 @@ WHERE id = 1;
 
 /* 4.- Eliminar el cliente con id = 1 de la tabla 'Clientes' */
 
-DELETE public.clientes
+DELETE FROM public.clientes
 WHERE id = 1 ;
-/*ERROR:  error de sintaxis en o cerca de «public»
-LINE 1: DELETE public.clientes
-               ^ 
-
-SQL state: 42601
-Character: 8 */
 
 /* 5.-Crear una tabla llamada 'pedidos' con las columnas id (entero, clave primaria), cliente_id (entero, clave externa referenciando a la tabla 'clientes'), producto (texto) y cantidad (entero) */
 
@@ -52,14 +46,8 @@ WHERE id=1;
 
 /* 8.- Eliminar el pedido con id=1 de la tabla 'pedidos' */
 
-DELETE public.pedidos
+DELETE FROM public.pedidos
 WHERE id=1;
-/*ERROR:  error de sintaxis en o cerca de «public»
-LINE 1: DELETE public.pedidos
-               ^ 
-
-SQL state: 42601
-Character: 8 */
 
 /* 9.- Crear una tabla llamada 'productos' con las columnas: id(entero, clave primaria), nombre (texto), y precio(decimal) */
 
