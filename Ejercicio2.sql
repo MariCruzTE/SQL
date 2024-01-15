@@ -1,6 +1,7 @@
 /*1.- Crea una base de datos llamada'MiBaseDeDatos'
 
-No aparece ninguna informacion al respecto en "Prework_introduccion a SQL", por lo que no se como realizarlo */
+No aparece ninguna informacion al respecto en "Prework_introduccion a SQL", por lo que no se como realizarlo. He buscado informacion pero solo encuentro 
+como crear una base de datos a traves de una ventana emergente, por lo que no podria pegaros aqui el código */
 
 /*2.-Crea una tabla llamada 'usuarios' con las columnas : 'id' (entero, clave primaria), 'nombre' (texto), 'edad'(entero)*/
 
