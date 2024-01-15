@@ -97,7 +97,13 @@ WHERE public.clientes.id = public.pedidos.cliente_id
 
 /*17.-Realizar una consulta que muestre el nombre del producto y la cantidad total de pedidos de este producto */
 
-SELECT producto, cantidad FROM public.pedidos 
+SELECT
+productos.nombre,
+SUM(pedidos.cantidad) as cantidad_total
+FROM public.productos
+LEFT JOIN public.pedidos
+ON public.productos.nombre = public.pedidos.producto
+GROUP BY productos.nombre;
 
 /*18.- Agregar una columna llamada 'fecha' a la tabla pedidos de tipo 'fecha'*/
 
@@ -118,7 +124,7 @@ REFERENCES public.productos(id)
 
 SELECT
 public.clientes.nombre as nombre,
-public.productos.nombre as producto,
+public.pedidos.producto as producto,
 public.pedidos.cantidad as cantidad
-FROM public.clientes, public.productos, public.pedidos
-WHERE public.clientes.id = public.pedidos.cliente_id AND public.productos.id = public.pedidos.producto_id
+FROM public.clientes, public.pedidos
+WHERE public.clientes.id = public.pedidos.cliente_id 
